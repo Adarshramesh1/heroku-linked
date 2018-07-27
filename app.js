@@ -4,7 +4,7 @@ var express        = require('express'),
     mongoose       = require('mongoose'),
     bodyParser     = require('body-parser'),
     app            = express();
-const port=process.env.PORT;
+const PORT=process.env.PORT;
 
 mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set('view engine', 'ejs');
@@ -112,6 +112,6 @@ app.delete("/blogs/:id", function(req, res){
 
 
 
-app.listen(port, function () {
+app.listen(PORT, function () {
   console.log("server listening on port 3000");
 })
